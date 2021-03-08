@@ -163,6 +163,7 @@ class TestGroupResource(ScimApiTestCase):
         # Validate group update specifics
 
         self.assertEqual(group.display_name, response.json.get('displayName'), 'Unexpected displayName in response')
+        self.assertEqual(group.external_id, response.json.get('externalId'), 'Unexpected externalId in response')
         request_members = _members_to_set(req['members'])
         self.assertEqual(
             request_members, _members_to_set(response.json.get('members')), 'Unexpected members in response'
