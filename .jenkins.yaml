@@ -1,3 +1,4 @@
+disabled: true
 builders:
   - script
 upstream:
